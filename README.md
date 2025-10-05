@@ -17,7 +17,9 @@ It fetches real-time weather data and a 5-day forecast from the OpenWeatherMap A
 
 ## Screenshots
 
-![Weather App Screenshot](public/vite.svg) <!-- Replace with actual screenshot if available -->
+![Weather App Screenshot](public/Screenshot-1.png)
+![Weather App Screenshot](public/Screenshot-2.png)
+![Weather App Screenshot](public/Screenshot-3.png)
 
 ## Getting Started
 
