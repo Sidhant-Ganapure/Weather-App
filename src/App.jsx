@@ -36,23 +36,30 @@ const WeatherApp = () => {
     if (e.key === "Enter") handleSearch();
   };
 
+  // Clear error when user types a new city
+  const handleCityChange = (newCity) => {
+    setCity(newCity);
+    if (error) setError("");
+  };
+
   const fetchWeatherData = async (cityName) => {
     setLoading(true);
     setError("");
 
     try {
-      localStorage.setItem("lastCity", cityName);
-
       const currentResponse = await fetch(
         `${BASE_URL}/weather?q=${cityName}&appid=${API_KEY}&units=metric`
       );
-      if (!currentResponse.ok) throw new Error("City not found");
       const currentData = await currentResponse.json();
+      if (!currentResponse.ok || currentData.cod === "404") throw new Error("City not found");
 
       const forecastResponse = await fetch(
         `${BASE_URL}/forecast?q=${cityName}&appid=${API_KEY}&units=metric`
       );
       const forecastJson = await forecastResponse.json();
+      if (!forecastResponse.ok || forecastJson.cod === "404") throw new Error("City not found");
+
+      localStorage.setItem("lastCity", cityName);
 
       setWeatherData(currentData);
       setForecastData(forecastJson);
@@ -65,6 +72,9 @@ const WeatherApp = () => {
       setBackgroundClass(conditionInfo.class);
     } catch {
       setError("City not found. Please try again.");
+      setWeatherData(null);
+      setForecastData(null);
+      setBackgroundClass("condition-clear");
     } finally {
       setLoading(false);
     }
@@ -75,7 +85,7 @@ const WeatherApp = () => {
       <Header />
       <SearchBar
         city={city}
-        setCity={setCity}
+        setCity={handleCityChange}
         handleSearch={handleSearch}
         handleKeyPress={handleKeyPress}
       />

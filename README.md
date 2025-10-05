@@ -20,6 +20,7 @@ It fetches real-time weather data and a 5-day forecast from the OpenWeatherMap A
 ![Weather App Screenshot](public/Screenshot-1.png)
 ![Weather App Screenshot](public/Screenshot-2.png)
 ![Weather App Screenshot](public/Screenshot-3.png)
+![Weather App Screenshot](public/Screenshot-4.png)
 
 ## Getting Started
 
@@ -42,11 +43,15 @@ It fetches real-time weather data and a 5-day forecast from the OpenWeatherMap A
    ```
 
 3. **Set up API Key: To run this project**
+   - For security reasons, the API key is not included in the repository.
    - Register at [OpenWeatherMap](https://openweathermap.org/api) to get a free API key.
    - Create a `.env.local` file in the project root and add the following:
      ```
      VITE_WEATHER_API_KEY=your_openweathermap_api_key
      ```
+
+### Live Demo
+Live Link: https://weather-app-ganapuresidhant-gmailcoms-projects.vercel.app/
 
 ### Running the App
 
@@ -74,6 +79,10 @@ npm run lint
 weather-app/
 ├── node_modules/
 ├── public/
+│   ├── Screenshot-1.png
+│   ├── Screenshot-2.png
+│   └── Screenshot-3.png
+│
 ├── src/
 │   ├── App.jsx
 │   ├── main.jsx
