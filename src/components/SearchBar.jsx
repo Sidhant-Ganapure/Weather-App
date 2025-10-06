@@ -1,21 +1,25 @@
 const SearchBar = ({ city, setCity, handleSearch, handleKeyPress }) => (
   <div className="search-container">
+    {/* Input field for entering the city name */}
     <input
       type="text"
       id="city-input"
-      placeholder="Enter city name..."
-      value={city}
-      onChange={(e) => setCity(e.target.value)}
-      onKeyPress={handleKeyPress}
-      list="cities"
+      placeholder="Enter city name..." // Placeholder text
+      value={city}                     // Controlled input: city value from state
+      onChange={(e) => setCity(e.target.value)} // Update state when input changes
+      onKeyPress={handleKeyPress}       // Trigger search on Enter key
+      list="cities"                     // Links to datalist for suggestions
     />
+
+    {/* Datalist for autocomplete suggestions */}
     <datalist id="cities">
+      {/* Common city options for quick search */}
       <option value="New York" />
       <option value="London" />
-      <option value="Hydrabad" />
+      <option value="Hyderabad" /> 
       <option value="Tokyo" />
       <option value="Paris" />
-      <option value="Banglore" />
+      <option value="Bangalore" />
       <option value="Sydney" />
       <option value="Berlin" />
       <option value="Moscow" />
@@ -33,10 +37,13 @@ const SearchBar = ({ city, setCity, handleSearch, handleKeyPress }) => (
       <option value="Rome" />
       <option value="Bangkok" />
     </datalist>
+
+    {/* Search button with icon */}
     <button id="search-btn" onClick={handleSearch}>
-      <i className="fas fa-search"></i>
+      <i className="fas fa-search"></i> {/* Font Awesome search icon */}
     </button>
   </div>
 );
 
+// Export component so it can be used in other files
 export default SearchBar;

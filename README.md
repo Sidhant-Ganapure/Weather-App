@@ -15,6 +15,9 @@ It fetches real-time weather data and a 5-day forecast from the OpenWeatherMap A
 - **Last City Memory:** Remembers and loads the last searched city using `localStorage`.
 - **Dynamic Background:** Background color changes based on weather condition.
 
+### Live Demo
+Live Link: https://weather-app-ganapuresidhant-gmailcoms-projects.vercel.app/
+
 ## Screenshots
 
 ![Weather App Screenshot](public/Screenshot-1.png)
@@ -49,9 +52,6 @@ It fetches real-time weather data and a 5-day forecast from the OpenWeatherMap A
      ```
      VITE_WEATHER_API_KEY=your_openweathermap_api_key
      ```
-
-### Live Demo
-Live Link: https://weather-app-ganapuresidhant-gmailcoms-projects.vercel.app/
 
 ### Running the App
 
