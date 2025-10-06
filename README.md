@@ -81,7 +81,8 @@ weather-app/
 ├── public/
 │   ├── Screenshot-1.png
 │   ├── Screenshot-2.png
-│   └── Screenshot-3.png
+│   ├── Screenshot-3.png
+│   └── Screenshot-4.png
 │
 ├── src/
 │   ├── App.jsx
@@ -96,10 +97,14 @@ weather-app/
 │       ├── Loading.jsx
 │       └── SearchBar.jsx
 │        
+├── index.html
 ├── .env.local
+├── .gitignore
+├── eslint.config.js
 ├── package.json
-├── vite.config.js
-└── ...
+├── package-lock.json
+├── REAMDE.md
+└── vite.config.js
 ```
 
 ## Customization
