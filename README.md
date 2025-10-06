@@ -24,6 +24,7 @@ Live Link: https://weather-app-ganapuresidhant-gmailcoms-projects.vercel.app/
 ![Weather App Screenshot](public/Screenshot-2.png)
 ![Weather App Screenshot](public/Screenshot-3.png)
 ![Weather App Screenshot](public/Screenshot-4.png)
+![Weather App Screenshot](public/Screenshot-5.png)
 
 ## Getting Started
 
